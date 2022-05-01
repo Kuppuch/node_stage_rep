@@ -15,6 +15,10 @@ db.sequelize
 
 const app = express();
 
+// Это добавилось
+app.set("view engine", "hbs");
+app.use(express.urlencoded({ extended: false }));
+
 app.use("/user", userRouter)
 app.use("/", homeRouter)
 
