@@ -1,5 +1,6 @@
 const db = require('../config/db.config');
 const express = require('express');
+const hbs = require('hbs')
 
 // Подключаем созданные роутеры
 const userRouter = require('../routes/userRouter')
@@ -15,9 +16,11 @@ db.sequelize
 
 const app = express();
 
-// Это добавилось
 app.set("view engine", "hbs");
 app.set("views", "./views");
+
+// Это добавили
+hbs.registerPartials('./views/partials')
 
 //так добавляются стили. Путь пишется относительный относительно корня проекта
 app.use(express.static('./views/styles'));

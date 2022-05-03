@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список пользователей</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+{{> menu}}
+<a href="/">Назад</a>
+<h1>Список пользователей</h1>
+<table>
+    <tr><th>Кто заказал</th><th>Обратный телефон</th><th>Email</th><th>Место</th><th>Вопрос какой имеет</th></tr>
+    {{#each requests}}
+        <tr><td>{{this.visitor_name}}</td><td>{{this.phone}}</td><td>{{this.email}}</td><td>{{this.table}}</td><td>{{this.content}}</td></tr>
+    {{/each}}
+</table>
+</body>
+<html>

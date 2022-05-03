@@ -25,3 +25,11 @@ exports.request = function (request, response) {
         console.log(resuest);
     }).catch(err=>console.log(err));
 }
+
+exports.getAllRequest = function (request, response) {
+    db.request.findAll({raw:true}).then(data => {
+        response.render('requests.hbs', {
+            requests: data //Обратите внимание, что requests параметр должен называться так же как во views/requests.hbs в 12 строке
+        });
+    }).catch(err=>console.log(err));
+}

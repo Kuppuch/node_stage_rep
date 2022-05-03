@@ -6,5 +6,6 @@ const homeRouter = express.Router();
 homeRouter.get("/about", homeController.about);
 homeRouter.post("/postreq", homeController.request);
 homeRouter.get("/", homeController.index);
+homeRouter.get("/requests", homeController.getAllRequest);
 
 module.exports = homeRouter;
