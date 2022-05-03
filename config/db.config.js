@@ -16,6 +16,10 @@ db.role = roleDefiner(sequelize)
 
 db.role.hasMany(db.user);
 
+// Проинициализировали в бд новую таблицу. С помощью метода sync в файле src/serever.js она сама добавится в бд
+const requestDefiner = require("../models/request")
+db.request = requestDefiner(sequelize)
+
 
 db.ROLES = ["user", "admin"]
 

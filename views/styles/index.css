@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    background: #505050;
+    font-family: Arial;
+    color: #fff;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #f3f3f3;
+}
+
+.center {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.form-main {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}

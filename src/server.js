@@ -17,6 +17,11 @@ const app = express();
 
 // Это добавилось
 app.set("view engine", "hbs");
+app.set("views", "./views");
+
+//так добавляются стили. Путь пишется относительный относительно корня проекта
+app.use(express.static('./views/styles'));
+
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/user", userRouter)
